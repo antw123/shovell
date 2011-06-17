@@ -2,13 +2,19 @@
 <html>
 <head>
   <title>Shovell</title>
-  <%= stylesheet_link_tag :all %>
+  <%= stylesheet_link_tag 'style' %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
 <body>
-
-<%= yield %>
+ 
+ <div id="content">
+	<h1>Shovell</h1>
+	<% unless flash[:notice].blank? %>
+		<div id="notification"><%= flash[:notice] %></div>
+	<% end %>
+    <%= yield %>
+ </div>
 
 </body>
 </html>

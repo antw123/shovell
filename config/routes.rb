@@ -1,4 +1,7 @@
 Shovell::Application.routes.draw do
+  get "stories/index"
+  resources :stories
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
