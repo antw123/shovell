@@ -16,7 +16,7 @@
 	<%= link_to @story.link, @story.link %>
 </p>
 <div id="vote_form">
-	<% form_tag story_votes_path(@story), :remote => true do %>
+	<%= form_tag story_votes_path(@story), :remote => true do %>
 	  <%= submit_tag 'shove it' %>
 	<% end %>
 </div>
