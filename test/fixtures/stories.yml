@@ -3,7 +3,9 @@
 one:
   name: My shiny weblog
   link: http://poocs.net/
+  user: anthony
 
 two:
   name: SitePoint Forums
   link: http://www.sitepoint.com/forums/
+  user: anthony

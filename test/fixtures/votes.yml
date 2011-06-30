@@ -3,7 +3,9 @@
 one:
   story: one
   id: 1
+  user: anthony
 
 two:
   story: one
   id: 2
+  user: anthony
