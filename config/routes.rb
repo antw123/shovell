@@ -1,4 +1,6 @@
 Shovell::Application.routes.draw do
+  root :to => "stories#index"
+  
   get "sessions/new"
 
   get "sessions/create"
@@ -6,12 +8,11 @@ Shovell::Application.routes.draw do
   get "sessions/destroy"
 
   get "votes/create"
-
-  get "stories/index"
-  resources :stories do
-    resources :votes
-  end
   
+  get "stories/index"
+
+  resources :stories, :has_many => :votes, :collection => { :bin => :get }
+      
   resource :session
 
   # The priority is based upon order of creation:
